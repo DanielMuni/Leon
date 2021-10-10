@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.leon">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".Game4x4"
+            android:exported="true" />
+        <activity
+            android:name=".Memorama"
+            android:exported="true" />
+        <activity
+            android:name=".primer_nivel"
+            android:exported="true" />
+        <activity
+            android:name=".segundo_nivel"
+            android:exported="true" />
+        <activity
+            android:name=".tercer_nivel"
+            android:exported="true" />
+        <activity
+            android:name=".cuarto_nivel"
+            android:exported="true" />
+        <activity
+            android:name=".juego_finalizado"
+            android:exported="true" />
+        <activity
+            android:name=".Laberinto"
+            android:exported="true" />
+        <activity
+            android:name=".SimonDice"
+            android:exported="true" />
+        <activity
+            android:name=".RodearNumero_Nivel1"
+            android:exported="true" />
+        <activity
+            android:name=".RodearNumero_Nivel2"
+            android:exported="true" />
+        <activity
+            android:name=".RodearNumero_Nivel3"
+            android:exported="true" />
+        <activity
+            android:name=".RodearNumero_NextLevel"
+            android:exported="true" />
+        <activity
+            android:name=".RodearNumero_Win"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_NextLevel"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_Nivel1"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_Nivel2"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_Nivel3"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_Nivel4"
+            android:exported="true" />
+        <activity
+            android:name=".UnirPuntos_Win"
+            android:exported="true" />
+        <activity
+            android:name=".RodearFiguraRepetida"
+            android:exported="true" />
+        <activity
+            android:name=".AcercaDe"
+            android:exported="true" />
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#99EAF4"
+	tools:context=".primer_nivel">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/topBar"
+		android:layout_width="409dp"
+		android:layout_height="60dp"
+		android:background="@color/blue_1"
+		android:minHeight="?attr/actionBarSize"
+		android:theme="?attr/actionBarTheme"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.004" />
+
+	<TextView
+		android:id="@+id/titleTxt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/titulo_app"
+		android:textColor="#FFFFFF"
+		android:textSize="24sp"
+		app:layout_constraintBottom_toBottomOf="@+id/topBar"
+		app:layout_constraintEnd_toEndOf="@+id/topBar"
+		app:layout_constraintStart_toStartOf="@+id/topBar"
+		app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+	<ImageButton
+		android:id="@+id/botonRegresar"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:background="#00FFFFFF"
+		android:contentDescription="@string/descripcion_flecha_regresar"
+		app:layout_constraintBottom_toBottomOf="@+id/topBar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="@+id/topBar"
+		app:layout_constraintTop_toTopOf="@+id/topBar"
+		app:layout_constraintVertical_bias="0.0"
+		app:srcCompat="?attr/homeAsUpIndicator"
+		tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+	<TextView
+		android:id="@+id/intruccionesTxt"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="30dp"
+		android:letterSpacing="0.055"
+		android:text="@string/juego_els_instrucciones_1"
+		android:textSize="20sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+	<TextView
+		android:id="@+id/intruccionesTxt2"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:text="@string/juego_els_instrucciones_2"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/intruccionesTxt"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<ImageView
+		android:id="@+id/marcoImg"
+		android:layout_width="150dp"
+		android:layout_height="120dp"
+		android:contentDescription="@string/marco_description"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/topBar"
+		app:layout_constraintVertical_bias="0.0"
+		app:srcCompat="@drawable/marco" />
+
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="113dp"
+		android:layout_height="98dp"
+		android:contentDescription="@string/imagen_correcta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.946"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.116"
+		app:srcCompat="@drawable/ballenita" />
+
+	<ImageView
+		android:id="@+id/ardillaImg"
+		android:layout_width="162dp"
+		android:layout_height="138dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.935"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.441"
+		app:srcCompat="@drawable/ardilla" />
+
+	<ImageView
+		android:id="@+id/imageView3"
+		android:layout_width="359dp"
+		android:layout_height="201dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.307"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.969"
+		app:srcCompat="@drawable/burro" />
+
+	<ImageView
+		android:id="@+id/camelloImg"
+		android:layout_width="256dp"
+		android:layout_height="174dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.103"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.405"
+		app:srcCompat="@drawable/camello" />
+
+	<ImageView
+		android:id="@+id/canguroImg"
+		android:layout_width="180dp"
+		android:layout_height="114dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.086"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.648"
+		app:srcCompat="@drawable/canguro" />
+
+	<ImageButton
+		android:id="@+id/botonSiluetaCorrecta"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#00FFFFFF"
+		android:onClick="SiluetaCorrectaNvl1"
+		app:layout_constraintBottom_toTopOf="@+id/imageView3"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/canguroImg"
+		app:layout_constraintTop_toBottomOf="@+id/ardillaImg"
+		app:srcCompat="@drawable/ballenita" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

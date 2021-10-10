@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAA0"
+    tools:context=".UnirPuntos_Nivel4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#FBE946"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            app:srcCompat="?attr/homeAsUpIndicator"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Conecta las Imagenes"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="1"
+        android:onClick="onTapLine1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo1_pt2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn3"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="3"
+        android:onClick="onTapLine1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo3_pt2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn2"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="2"
+        android:onClick="onTapLine1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo2_pt2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn"
+        app:layout_constraintVertical_bias="0.016"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn4"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="4"
+        android:onClick="onTapLine1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo4_pt2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn6"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="3"
+        android:onClick="onTapLine2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo3_pt1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn9"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="2"
+        android:onClick="onTapLine2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo2_pt1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn8"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn8"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="1"
+        android:onClick="onTapLine2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo1_pt1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn7"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upNivel4_btn7"
+        android:layout_width="114dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="4"
+        android:onClick="onTapLine2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/conejo4_pt1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn6"
+        app:layout_constraintVertical_bias="0.005"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

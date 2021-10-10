@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E89898"
+    tools:context=".SimonDice">
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="114dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#4700FF"
+        android:lineSpacingExtra="20sp"
+        android:onClick="startGame"
+        android:text="START"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#D14444"
+        android:clickable="false"
+        android:onClick="handleTap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <Button
+        android:id="@+id/yellow"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#C6BF3C"
+        android:onClick="handleTap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/green"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#43E438"
+        android:onClick="handleTap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/yellow"
+        app:layout_constraintTop_toBottomOf="@+id/blue"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="47dp"
+        android:backgroundTint="#4082E6"
+        android:onClick="handleTap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toEndOf="@+id/red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="416dp"
+        android:layout_height="54dp"
+        android:background="#F31212"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/returnButton"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:background="#00FFFFFF"
+            android:onClick="openMenuPrincipal"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            app:srcCompat="?attr/homeAsUpIndicator"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Simon Dice"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="261dp"
+        android:layout_height="49dp"
+        android:background="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="262dp"
+        android:layout_height="49dp"
+        android:text="   Puntaje: 100"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

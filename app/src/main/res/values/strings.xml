@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Leon</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO2</string>
+    <string name="daniel_munive_meneses_a01734205_nfernando_jim_nez_pereyra_a01734609_nlaura_p_rez_garc_a_a01731103_njorge_tato_a01733616_n_nitesm_campus_puebla">Daniel Munive Meneses A01734205\nFernando Jiménez Pereyra A01734609\nLaura Pérez García A01731103\nJorge Tato A01733616\n\nITESM- Campus Puebla</string>
+    <string name="le_n">León</string>
+    <string name="nada">NADA</string>
+    <string name="memorama">Memorama</string>
+    <string name="_4x4_game">4x4 Game</string>
+    <string name="titulo_app">Encuentra la Silueta</string>
+    <string name="descripcion_flecha_regresar">Flecha para Regresar</string>
+    <string name="juego_els_instrucciones_1">Encuentra la silueta del</string>
+    <string name="juego_els_instrucciones_2">animal igual al de la imagen</string>
+    <string name="marco_description">Marco de la silueta a buscar</string>
+    <string name="imagen_correcta">Imagen Correcta</string>
+    <string name="boton_silueta_correcta">Boton Silueta Correcta</string>
+    <string name="imagen_incorrecta">Imagen Incorrecta</string>
+    <string name="dialog_fire_missiles" />
+    <string name="fire" />
+    <string name="cancel" />
+</resources>
