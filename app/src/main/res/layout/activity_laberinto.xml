@@ -52,331 +52,99 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/felicitaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/laberintoDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="0.838"
-        app:srcCompat="@mipmap/perro" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="65dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
-        app:srcCompat="@drawable/hueso" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="411dp"
-        android:layout_height="490dp"
-        android:translationY="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/laberintoDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView44"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView45"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView46"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView43"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView47"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView40"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView39"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView36"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView37"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="72dp">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView35"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/camino" />
-
-            <ImageView
-                android:id="@+id/imageView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arbusto" />
-        </TableRow>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.75">
 
     </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#56C61C"
+                android:onClick="izquierda"
+                android:text="Izquierda"
+                app:layout_constraintDimensionRatio="16:9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF0000"
+                android:onClick="arriba"
+                android:text="Arriba" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#0047FF"
+                android:onClick="abajo"
+                android:text="Abajo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#EDD712"
+                android:onClick="derecha"
+                android:text="Derecha" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
