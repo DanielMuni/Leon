@@ -104,16 +104,16 @@
 
 	<ImageView
 		android:id="@+id/ardillaImg"
-		android:layout_width="162dp"
-		android:layout_height="138dp"
+		android:layout_width="132dp"
+		android:layout_height="110dp"
 		android:contentDescription="@string/imagen_incorrecta"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.935"
+		app:layout_constraintHorizontal_bias="0.991"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintVertical_bias="0.441"
-		app:srcCompat="@drawable/ardilla" />
+		app:layout_constraintVertical_bias="0.416"
+		app:srcCompat="@drawable/ardillas" />
 
 	<ImageView
 		android:id="@+id/imageView3"
@@ -135,7 +135,7 @@
 		android:contentDescription="@string/imagen_incorrecta"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.103"
+		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintVertical_bias="0.405"
@@ -162,8 +162,10 @@
 		android:onClick="SiluetaCorrectaNvl1"
 		app:layout_constraintBottom_toTopOf="@+id/imageView3"
 		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.555"
 		app:layout_constraintStart_toEndOf="@+id/canguroImg"
 		app:layout_constraintTop_toBottomOf="@+id/ardillaImg"
+		app:layout_constraintVertical_bias="1.0"
 		app:srcCompat="@drawable/ballenita" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

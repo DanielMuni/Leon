@@ -112,13 +112,13 @@
 		android:layout_height="wrap_content"
 		android:background="#00FFFFFF"
 		android:contentDescription="@string/boton_silueta_correcta"
-		android:onClick="SiluetaCorrecta"
+		android:onClick="SiluetaCorrecta4"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.086"
+		app:layout_constraintHorizontal_bias="0.036"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintVertical_bias="0.649"
+		app:layout_constraintVertical_bias="0.629"
 		app:srcCompat="@drawable/gallo" />
 
 	<ImageView
@@ -145,7 +145,7 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintVertical_bias="0.463"
-		app:srcCompat="@drawable/ardilla" />
+		app:srcCompat="@drawable/ardillas" />
 
 	<ImageView
 		android:id="@+id/imageView14"

@@ -17,7 +17,7 @@ public class juego_finalizado extends AppCompatActivity {
 
 	// Funcion Silueta Correcta
 	public void MenuPrincipal(View view){
-		Intent siguienteNivel = new Intent(this, MainActivity.class);
+		Intent siguienteNivel = new Intent(this, MenuPrincipal.class);
 		startActivity(siguienteNivel);
 	}
 }
