@@ -61,146 +61,167 @@
         app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/ic_launcher_background" />
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="1"
-        android:onClick="onTapLine1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo1_pt2"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintDimensionRatio="3:5"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn3"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="3"
-        android:onClick="onTapLine1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo3_pt2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn2"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="2"
-        android:onClick="onTapLine1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo2_pt2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn"
-        app:layout_constraintVertical_bias="0.016"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/upNivel4_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="1"
+                android:onClick="onTapLine1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo1_pt2"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn4"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="4"
-        android:onClick="onTapLine1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo4_pt2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn3"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/upNivel4_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="2"
+                android:onClick="onTapLine1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo2_pt2"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn6"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="3"
-        android:onClick="onTapLine2"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo3_pt1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/upNivel4_btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="3"
+                android:onClick="onTapLine1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo3_pt2"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn9"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="2"
-        android:onClick="onTapLine2"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo2_pt1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn8"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/upNivel4_btn4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="4"
+                android:onClick="onTapLine1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo4_pt2"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn8"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="1"
-        android:onClick="onTapLine2"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo1_pt1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn7"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
 
-    <ImageButton
-        android:id="@+id/upNivel4_btn7"
-        android:layout_width="114dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="4"
-        android:onClick="onTapLine2"
-        android:scaleType="fitCenter"
-        android:src="@drawable/conejo4_pt1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNivel4_btn6"
-        app:layout_constraintVertical_bias="0.005"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/upNivel4_btn6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="3"
+                android:onClick="onTapLine2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo3_pt1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/upNivel4_btn7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="4"
+                android:onClick="onTapLine2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo4_pt1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/upNivel4_btn8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:background="#00FFFFFF"
+                android:contentDescription="1"
+                android:onClick="onTapLine2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo1_pt1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/upNivel4_btn9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="2"
+                android:onClick="onTapLine2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conejo2_pt1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
