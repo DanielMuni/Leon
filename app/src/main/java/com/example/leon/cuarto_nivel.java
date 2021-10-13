@@ -16,7 +16,7 @@ public class cuarto_nivel extends AppCompatActivity {
     }
 
 	// Funcion Silueta Correcta
-	public void SiluetaCorrecta(View view){
+	public void SiluetaCorrecta4(View view){
 		Toast.makeText(this, "¡Perfecto, encontraste al Gallo!", Toast.LENGTH_LONG).show();
 		Intent siguienteNivel = new Intent(this, juego_finalizado.class);
 		startActivity(siguienteNivel);
