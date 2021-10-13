@@ -41,5 +41,6 @@ public class UnirPuntos_NextLevel extends AppCompatActivity {
             Intent intent = new Intent(this, UnirPuntos_Nivel4.class);
             startActivity(intent);
         }
+        finish();
     }
 }
