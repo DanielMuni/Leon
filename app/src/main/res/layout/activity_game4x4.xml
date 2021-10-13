@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFA183"
-    tools:context=".SalirMemorama">
+    >
 
     <GridLayout
         android:id="@+id/grid_layout_4x4"
