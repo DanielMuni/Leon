@@ -29,13 +29,11 @@ public class MenuPrincipal extends AppCompatActivity {
 
     public void openColorearParejas(View v) {
         Intent intent = new Intent(this, Memorama.class);
-
         startActivity(intent);
     }
 
     public void openImagenesRepetidas(View v) {
         Intent intent = new Intent(this, RodearFiguraRepetida.class);
-
         startActivity(intent);
     }
 
@@ -52,11 +50,13 @@ public class MenuPrincipal extends AppCompatActivity {
     public void openInicio(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
     }
 
     public void openLaberinto(View v) {
         Intent intent = new Intent(this, Laberinto.class);
         startActivity(intent);
+
     }
 
     public void openSimonDice(View v) {
