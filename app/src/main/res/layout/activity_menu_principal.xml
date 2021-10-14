@@ -66,7 +66,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openRodearNumero"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/boton1" />
+                    app:srcCompat="@drawable/redondo1" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
@@ -76,7 +76,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openImagenesRepetidas"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/boton3" />
+                    app:srcCompat="@drawable/redondo3" />
 
                 <ImageButton
                     android:id="@+id/imageButton19"
@@ -86,7 +86,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openLaberinto"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/boton4" />
+                    app:srcCompat="@drawable/redondo5" />
             </LinearLayout>
 
             <LinearLayout
@@ -103,7 +103,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openUnirPuntos"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/boton2" />
+                    app:srcCompat="@drawable/redondo2" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
@@ -113,7 +113,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openColorearParejas"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/memorama" />
+                    app:srcCompat="@drawable/redondo4" />
 
                 <ImageButton
                     android:id="@+id/imageButton20"
@@ -123,7 +123,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:onClick="openEncontrarSilueta"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/boton5" />
+                    app:srcCompat="@drawable/redondo6" />
             </LinearLayout>
         </LinearLayout>
 
@@ -148,7 +148,7 @@
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="openSimonDice"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/boton6" />
+                app:srcCompat="@drawable/redondo7" />
 
             <LinearLayout
                 android:layout_width="0dp"
