@@ -18,4 +18,6 @@
     <string name="dialog_fire_missiles" />
     <string name="fire" />
     <string name="cancel" />
+    <string name="salir">Salir</string>
+    <string name="jugar">Jugar</string>
 </resources>

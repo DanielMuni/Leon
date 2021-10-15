@@ -19,7 +19,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="@string/memorama"
+        android:padding="20dp"
         android:textSize="24sp"
+        android:layout_margin="20dp"
         android:textStyle="bold" />
 
     <Button
@@ -29,6 +31,17 @@
         android:layout_margin="20dp"
         android:backgroundTint="#673AB7"
         android:padding="20dp"
-        android:text="Jugar"
+        android:text="@string/jugar"
         android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#E61515"
+        android:onClick="openMenuPrincipal"
+        android:padding="20dp"
+        android:text="@string/salir" />
+
 </LinearLayout>

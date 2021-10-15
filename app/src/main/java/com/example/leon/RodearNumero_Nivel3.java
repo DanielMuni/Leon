@@ -26,6 +26,11 @@ public class RodearNumero_Nivel3 extends AppCompatActivity {
         game = new RodearNumeroJuego();
     }
 
+    public void openMenuPrincipal(View v) {
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
+    }
+
     public RodearNumero_Nivel3() {
         instance = this;
     }

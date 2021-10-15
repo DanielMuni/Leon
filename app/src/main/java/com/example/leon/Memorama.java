@@ -24,8 +24,13 @@ public class Memorama extends AppCompatActivity {
                 Intent intent = new Intent(Memorama.this, Game4x4.class);
                 startActivity(intent);
             }
+
         });
-
-
     }
+
+    public void openMenuPrincipal(View v) {
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
+    }
+
 }

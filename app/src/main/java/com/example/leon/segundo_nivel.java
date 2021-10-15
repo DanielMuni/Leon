@@ -21,4 +21,9 @@ public class segundo_nivel extends AppCompatActivity {
 		Intent nivelTres = new Intent(this, tercer_nivel.class);
 		startActivity(nivelTres);
 	}
+
+	public void openMenuPrincipal(View v) {
+		Intent intent = new Intent(this, MenuPrincipal.class);
+		startActivity(intent);
+	}
 }

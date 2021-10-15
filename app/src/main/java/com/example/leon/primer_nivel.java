@@ -22,5 +22,10 @@ public class primer_nivel extends AppCompatActivity {
         startActivity(nivelDos);
     }
 
+    public void openMenuPrincipal(View v) {
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
+    }
+
 
 }

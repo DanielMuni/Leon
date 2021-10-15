@@ -72,6 +72,7 @@
 		android:layout_height="60dp"
 		android:background="#00FFFFFF"
 		android:contentDescription="@string/descripcion_flecha_regresar"
+		android:onClick="openMenuPrincipal"
 		app:layout_constraintBottom_toBottomOf="@+id/topBar"
 		app:layout_constraintEnd_toEndOf="@+id/topBar"
 		app:layout_constraintHorizontal_bias="0.0"

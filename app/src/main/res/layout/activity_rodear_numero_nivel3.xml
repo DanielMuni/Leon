@@ -381,6 +381,7 @@
             android:background="#00FFFFFF"
             android:minWidth="48dp"
             android:minHeight="48dp"
+            android:onClick="openMenuPrincipal"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -389,8 +390,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.007"
             app:srcCompat="?attr/homeAsUpIndicator"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:tint="#FFFFFF" />
+            app:tint="#FFFFFF"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -405,18 +406,6 @@
             tools:layout_editor_absoluteY="16dp" />
 
     </androidx.appcompat.widget.Toolbar>
-
-    <ImageView
-        android:id="@+id/userImg"
-        android:layout_width="43dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
-        app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -21,4 +21,9 @@ public class cuarto_nivel extends AppCompatActivity {
 		Intent siguienteNivel = new Intent(this, juego_finalizado.class);
 		startActivity(siguienteNivel);
 	}
+
+	public void openMenuPrincipal(View v) {
+		Intent intent = new Intent(this, MenuPrincipal.class);
+		startActivity(intent);
+	}
 }

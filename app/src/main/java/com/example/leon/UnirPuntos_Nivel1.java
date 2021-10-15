@@ -40,6 +40,11 @@ public class UnirPuntos_Nivel1 extends AppCompatActivity {
         btn5 = findViewById(R.id.upNivel1_btn5);
     }
 
+    public void openMenuPrincipal(View v) {
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
+    }
+
     public UnirPuntos_Nivel1() {
         instance = this;
     }
