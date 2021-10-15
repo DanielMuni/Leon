@@ -52,14 +52,16 @@ public class RodearNumero_Nivel3 extends AppCompatActivity {
     public void onTap(View v) {
         Button tapped = (Button)v;
 
-        if (game.correctButton(tapped)) {
-            tapped.setBackgroundColor(Color.WHITE);
-            tapped.setTextColor(Color.argb(100,187,134,252));
+        if (tapped.getContentDescription() == null) {
+            if (game.correctButton(tapped)) {
+                tapped.setBackgroundColor(Color.WHITE);
+                tapped.setTextColor(Color.argb(100, 187, 134, 252));
+                tapped.setContentDescription("F");
 
-            game.allNumbers(2, 3);
-        }
-        else {
-            flashAndPlay(0, tapped);
+                game.allNumbers(3, 1);
+             } else {
+                flashAndPlay(0, tapped);
+             }
         }
     }
 
