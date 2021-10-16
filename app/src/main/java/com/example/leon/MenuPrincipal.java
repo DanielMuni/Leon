@@ -43,7 +43,7 @@ public class MenuPrincipal extends AppCompatActivity {
     }
 
     public void openImagenesRepetidas(View v) {
-        Intent intent = new Intent(this, RodearFiguraRepetida.class);
+        Intent intent = new Intent(this, MainActivity_ef.class);
         startActivity(intent);
     }
 

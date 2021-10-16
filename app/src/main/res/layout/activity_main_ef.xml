@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FEC8D8"
+	tools:context=".MainActivity_ef">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/topBar"
+		android:layout_width="0dp"
+		android:layout_height="60dp"
+		android:background="@color/purple_200"
+		android:minHeight="?attr/actionBarSize"
+		android:theme="?attr/actionBarTheme"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<TextView
+		android:id="@+id/titleTxt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/encuentra_la_figura"
+		android:textColor="#FFFFFF"
+		android:textSize="24sp"
+		app:layout_constraintBottom_toBottomOf="@+id/topBar"
+		app:layout_constraintEnd_toEndOf="@+id/topBar"
+		app:layout_constraintStart_toStartOf="@+id/topBar"
+		app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+	<ImageButton
+		android:id="@+id/botonRegresar"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:background="#00FFFFFF"
+		android:contentDescription="@string/descripcion_flecha_regresar"
+		android:onClick="openMenuPrincipal"
+		app:layout_constraintBottom_toBottomOf="@+id/topBar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="@+id/topBar"
+		app:layout_constraintTop_toTopOf="@+id/topBar"
+		app:layout_constraintVertical_bias="0.0"
+		app:srcCompat="?attr/homeAsUpIndicator"
+		tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+	<TextView
+		android:id="@+id/intruccionesTxt"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="30dp"
+		android:letterSpacing="0.055"
+		android:text="@string/encuentra_la_figura_del"
+		android:textSize="20sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+	<TextView
+		android:id="@+id/intruccionesTxt2"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:text="@string/marco"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/intruccionesTxt"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<ImageView
+		android:id="@+id/marcoImg"
+		android:layout_width="150dp"
+		android:layout_height="120dp"
+		android:contentDescription="@string/marco_description"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/topBar"
+		app:layout_constraintVertical_bias="0.0"
+		app:srcCompat="@drawable/marco" />
+
+	<ImageView
+		android:id="@+id/correctoImg"
+		android:layout_width="104dp"
+		android:layout_height="99dp"
+		android:contentDescription="@string/imagen_correcta"
+		app:layout_constraintBottom_toBottomOf="@+id/marcoImg"
+		app:layout_constraintEnd_toEndOf="@+id/marcoImg"
+		app:layout_constraintHorizontal_bias="0.468"
+		app:layout_constraintStart_toEndOf="@+id/intruccionesTxt2"
+		app:layout_constraintTop_toTopOf="@+id/marcoImg"
+		app:layout_constraintVertical_bias="0.38"
+		app:srcCompat="@drawable/circulo_azul" />
+
+	<ImageButton
+		android:id="@+id/botonFiguraCorrecta"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#00FFFFFF"
+		android:contentDescription="@string/boton_silueta_correcta"
+		android:onClick="SiluetaCorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.774"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView3"
+		app:layout_constraintVertical_bias="0.114"
+		app:srcCompat="@drawable/circulo_azul_min" />
+
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="156dp"
+		android:layout_height="146dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.101"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/intruccionesTxt2"
+		app:layout_constraintVertical_bias="0.036"
+		app:srcCompat="@drawable/circulo_morado" />
+
+	<ImageView
+		android:id="@+id/imageView4"
+		android:layout_width="173dp"
+		android:layout_height="168dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/botonFiguraCorrecta"
+		app:layout_constraintHorizontal_bias="0.183"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView6"
+		app:layout_constraintVertical_bias="0.263"
+		app:srcCompat="@drawable/circulo_negro" />
+
+	<ImageView
+		android:id="@+id/imageView6"
+		android:layout_width="111dp"
+		android:layout_height="118dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/botonFiguraCorrecta"
+		app:layout_constraintHorizontal_bias="0.322"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView2"
+		app:layout_constraintVertical_bias="0.081"
+		app:srcCompat="@drawable/circulo_verde" />
+
+	<ImageView
+		android:id="@+id/imageView3"
+		android:layout_width="183dp"
+		android:layout_height="174dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.555"
+		app:layout_constraintStart_toEndOf="@+id/imageView2"
+		app:layout_constraintTop_toBottomOf="@+id/marcoImg"
+		app:layout_constraintVertical_bias="0.018"
+		app:srcCompat="@drawable/circulo_naranja" />
+
+	<ImageView
+		android:id="@+id/imageView5"
+		android:layout_width="133dp"
+		android:layout_height="121dp"
+		android:contentDescription="@string/imagen_incorrecta"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.426"
+		app:layout_constraintStart_toEndOf="@+id/imageView4"
+		app:layout_constraintTop_toBottomOf="@+id/botonFiguraCorrecta"
+		app:layout_constraintVertical_bias="0.358"
+		app:srcCompat="@drawable/circulo_rojo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

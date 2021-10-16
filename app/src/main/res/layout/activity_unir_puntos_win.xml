@@ -38,6 +38,7 @@
         android:id="@+id/upWinNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#EEFF00"
         android:onClick="nextLevel"
         android:text="Menu Principal"
         android:textSize="20sp"

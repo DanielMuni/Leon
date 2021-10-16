@@ -81,6 +81,21 @@
             android:name=".MenuPrincipal"
             android:exported="true" />
         <activity
+            android:name=".juego_finalizado_ef"
+            android:exported="true" />
+        <activity
+            android:name=".cuarto_nivel_ef"
+            android:exported="true" />
+        <activity
+            android:name=".tercer_nivel_ef"
+            android:exported="true" />
+        <activity
+            android:name=".segundo_nivel_ef"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity_ef"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
