@@ -37,9 +37,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="2:3"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
+        app:layout_constraintDimensionRatio="2.5:3"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/buttonAcerca"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
             android:layout_weight="2">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -80,7 +80,13 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -118,14 +124,14 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".75"
                 android:orientation="vertical"></LinearLayout>
 
             <ImageButton
                 android:id="@+id/imageButton21"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="openSimonDice"
                 android:scaleType="fitXY"
@@ -134,7 +140,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".75"
                 android:orientation="vertical"></LinearLayout>
         </LinearLayout>
 
