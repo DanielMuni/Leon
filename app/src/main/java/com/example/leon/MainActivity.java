@@ -9,7 +9,7 @@ import android.widget.ActionMenuView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    DataBase usuarios;
 
 
 
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        usuarios = new DataBase(this, null, null, 1)
     }
         public void openMenuPrincipal(View v) {
             Intent intent = new Intent(this, MenuPrincipal.class);
