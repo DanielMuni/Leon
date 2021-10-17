@@ -27,9 +27,9 @@ public class DataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE = "CREATE TABLE " +
                 TABLE + "(" +
-                COLUMN_ID + " INTERGER PRIMARY KEY,  " +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,  " +
                 COLUMN_NOMBRE + " TEXT, " +
-                COLUMN_PUNTUACION + " INTERGER, " +
+                COLUMN_PUNTUACION + " INTEGER, " +
                 COLUMN_IMAGEN + " TEXT, " +
                 COLUMN_STATUS +" INTEGER)";
         db.execSQL(CREATE_TABLE);
@@ -45,8 +45,15 @@ public class DataBase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //Quitamos el usuario anteriormente selecionado
-        String query = "UPDATE " + TABLE + " SET " + COLUMN_STATUS + " = 0" +" WHERE " + COLUMN_STATUS + "= 1";
-        db.execSQL(query);
+        String count = "SELECT count(*) FROM " + TABLE;
+        Cursor cursor = db.rawQuery(count, null);
+        cursor.moveToFirst();
+        int icount = cursor.getInt(0);
+        if (icount > 0) {
+            ContentValues query = new ContentValues();
+            query.put(COLUMN_STATUS, 0);
+            db.update(TABLE, query, COLUMN_STATUS + " = 1", null);
+        }
 
         //Agregamos el nuevo usuario como seleccionado
         ContentValues values = new ContentValues();
@@ -60,27 +67,65 @@ public class DataBase extends SQLiteOpenHelper {
 
     public Usuario findUsuarioSeleccionado(){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE + " WHERE " + COLUMN_STATUS + "= 1";
-        Cursor cursor = db.rawQuery(query, null);
         Usuario usuario = null;
-        if (cursor.moveToFirst())
-            usuario = new Usuario (cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3));
-        cursor.close();
+
+        String count = "SELECT count(*) FROM " + TABLE;
+        Cursor mcursor = db.rawQuery(count, null);
+        mcursor.moveToFirst();
+        int icount = mcursor.getInt(0);
+        if (icount > 0) {
+            String query = "SELECT * FROM " + TABLE + " WHERE " + COLUMN_STATUS + " = 1";
+            Cursor cursor = db.rawQuery(query, null);
+            if (cursor.moveToFirst())
+                usuario = new Usuario(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3));
+            cursor.close();
+        }
+
         db.close();
 
         return usuario;
+    }
+
+    public void actualizarPuntos(Usuario usuario){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues query = new ContentValues();
+        query.put(COLUMN_PUNTUACION, usuario.getPuntuacion());
+        db.update(TABLE, query, COLUMN_ID + " = " + usuario.getId(), null);
+        db.close();
+    }
+    public void limpiar(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE;
+        db.execSQL(query);
+        db.close();
     }
 
     public ArrayList<Usuario> getUsuariosRegistrados(){
         ArrayList<Usuario> usuariosRegistrados = new ArrayList<>();
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE + " WHERE " + COLUMN_STATUS + "= 1";
+        String query = "SELECT * FROM " + TABLE;
         Cursor cursor = db.rawQuery(query, null);
 
         while (cursor.moveToNext())
             usuariosRegistrados.add(new Usuario (cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3)));
 
+        cursor.close();
+        db.close();
+
+        return usuariosRegistrados;
+    }
+
+    public ArrayList<String> getUsuariosRegistradosSimple(){
+        ArrayList<String> usuariosRegistrados = new ArrayList<>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE;
+        Cursor cursor = db.rawQuery(query, null);
+
+        while (cursor.moveToNext()) {
+            usuariosRegistrados.add(cursor.getString(1) + "\t\t" + cursor.getInt(2));
+        }
         cursor.close();
         db.close();
 

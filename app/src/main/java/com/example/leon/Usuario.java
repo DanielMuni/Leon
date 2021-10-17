@@ -45,7 +45,11 @@ public class Usuario {
     }
 
     public String getImagenSrc(){
-        return imagenSrc;
+        if (this != null)
+            return imagenSrc;
+        else
+            return "usuarioPorDefinir";
+
     }
 
     public void setImagen(String imagenSrc){
@@ -53,6 +57,7 @@ public class Usuario {
     }
 
     public void aumentarPuntacion(int puntosExtras){
-        this.setPuntuacion(this.getPuntuacion() + puntosExtras);
+        if (this.puntuacion <= puntuacionMaxima)
+            this.setPuntuacion(this.getPuntuacion() + puntosExtras);
     }
 }
