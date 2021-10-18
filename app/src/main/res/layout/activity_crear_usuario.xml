@@ -30,7 +30,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil1"
-                tools:srcCompat="@drawable/perfil_1" />
+                android:src="@drawable/perfil_1" />
+
 
             <ImageButton
                 android:id="@+id/imageButton8"
@@ -39,7 +40,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil2"
-                tools:srcCompat="@drawable/perfil_2" />
+                android:src="@drawable/perfil_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +62,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil3"
-                tools:srcCompat="@drawable/perfil_3" />
+                android:src="@drawable/perfil_3" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
@@ -70,7 +71,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil4"
-                tools:srcCompat="@drawable/perfil_4" />
+                android:src="@drawable/perfil_4" />
         </LinearLayout>
     </LinearLayout>
 
@@ -98,4 +99,5 @@
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="crear"
         app:layout_constraintTop_toBottomOf="@+id/nombreDeUsuario" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
