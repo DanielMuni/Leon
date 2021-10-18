@@ -46,10 +46,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        usuarios.limpiar();
-        //usuarios.addUsuario("Fer", "perfil_1");
-        //usuarios.addUsuario("Lau", "perfil_2");
-
         //Actualizar sesion
         sesion = usuarios.findUsuarioSeleccionado();
 
@@ -57,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.clear();
         adapter.addAll(usuarios.getUsuariosRegistradosSimple());
         usuariosAElegir.setAdapter(adapter);
-
 
         //Poner la imagen de perfil de usuario activo
         if (sesion != null) {

@@ -100,6 +100,9 @@ public class Laberinto extends AppCompatActivity {
 
             felicitaciones.setText("FELICIDADES!!!");
             felicitaciones.setTypeface(Typeface.MONOSPACE);
+            Intent intent = new Intent(this, MenuPrincipal.class);
+            startActivity(intent);
+            finish();
         }
     }
 
