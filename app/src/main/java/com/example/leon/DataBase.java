@@ -73,7 +73,7 @@ public class DataBase extends SQLiteOpenHelper {
         Cursor mcursor = db.rawQuery(count, null);
         mcursor.moveToFirst();
         int icount = mcursor.getInt(0);
-        if (icount > 0) {
+        if (icount > 0 ) {
             String query = "SELECT * FROM " + TABLE + " WHERE " + COLUMN_STATUS + " = 1";
             Cursor cursor = db.rawQuery(query, null);
             if (cursor.moveToFirst())
@@ -82,8 +82,38 @@ public class DataBase extends SQLiteOpenHelper {
         }
 
         db.close();
-
         return usuario;
+    }
+
+    public void iniciarSesionByIndex(int index){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Usuario usuario = null;
+
+        String count = "SELECT count(*) FROM " + TABLE;
+        Cursor mcursor = db.rawQuery(count, null);
+        mcursor.moveToFirst();
+        int icount = mcursor.getInt(0);
+        if (icount > 0) {
+            ContentValues query = new ContentValues();
+            query.put(COLUMN_STATUS, 0);
+            db.update(TABLE, query, COLUMN_STATUS + " = 1", null);
+
+            String busqueda = "SELECT * FROM " + TABLE;
+            Cursor cursor = db.rawQuery(busqueda, null);
+            int id;
+            while (index > -1) {
+                cursor.moveToNext();
+                index--;
+            }
+            id = cursor.getInt(0);
+            cursor.close();
+
+            ContentValues activar = new ContentValues();
+            activar.put(COLUMN_STATUS, 1);
+            db.update(TABLE, activar, COLUMN_ID + " = " + id, null);
+        }
+
+        db.close();
     }
 
     public void actualizarPuntos(Usuario usuario){
@@ -124,7 +154,7 @@ public class DataBase extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query, null);
 
         while (cursor.moveToNext()) {
-            usuariosRegistrados.add(cursor.getString(1) + "\t\t" + cursor.getInt(2));
+            usuariosRegistrados.add(cursor.getString(1) );
         }
         cursor.close();
         db.close();

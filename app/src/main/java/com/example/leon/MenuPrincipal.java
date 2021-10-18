@@ -7,11 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MenuPrincipal extends AppCompatActivity {
+    DataBase usuarios = MainActivity.usuarios;
+    Usuario usuarioActual;
 
+    ImageButton perfil;
+    TextView nombreYPuntos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +25,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
 
         //Obtener la cantidad de RAM disponible en el dispositivo
-        ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);;
+        ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
         activityManager.getMemoryInfo(memoryInfo);
         float GiB = 1073741824; //Cantidad de bytes en un GiB
@@ -29,8 +35,21 @@ public class MenuPrincipal extends AppCompatActivity {
             setContentView(R.layout.activity_menu_principal);
         else
             setContentView(R.layout.activity_menu_principal_low_specs);
+        //textView_MostarPerfil;
+        nombreYPuntos = findViewById(R.id.textView_MostarPerfil);
+        perfil = findViewById(R.id.perfil);
+        usuarioActual = null;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        usuarioActual = usuarios.findUsuarioSeleccionado();
+        int imageResource = getApplicationContext().getResources().getIdentifier("drawable/" + usuarioActual.getImagenSrc(), null, getApplicationContext().getPackageName());
+        perfil.setImageResource(imageResource);
+        String datos = usuarioActual.getNombre();
+        nombreYPuntos.setText(datos);
+    }
 
     public void openAcercaDe(View v) {
         Intent intent = new Intent(this, AcercaDe.class);

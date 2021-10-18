@@ -45,11 +45,7 @@ public class Usuario {
     }
 
     public String getImagenSrc(){
-        if (this != null)
-            return imagenSrc;
-        else
-            return "usuarioPorDefinir";
-
+        return imagenSrc;
     }
 
     public void setImagen(String imagenSrc){

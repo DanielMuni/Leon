@@ -7,13 +7,14 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ActionMenuView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    DataBase usuarios;
+    public static DataBase usuarios;
     ListView usuariosAElegir;
     ArrayAdapter<String> adapter;
 
@@ -29,9 +30,15 @@ public class MainActivity extends AppCompatActivity {
         sesionImg = findViewById(R.id.imgUsuarioSelecionado);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         usuarios = new DataBase(this, null, null, 1);
-        if (usuarios != null)
-            System.out.println("?");
-        //getApplicationContext() .deleteDatabase("usuarios.db");
+
+        usuariosAElegir.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                int index = position;
+                usuarios.iniciarSesionByIndex(index);
+               openMenuPrincipal();
+            }
+        });
     }
 
 
@@ -42,12 +49,14 @@ public class MainActivity extends AppCompatActivity {
         /*
         usuarios.limpiar();
         usuarios.addUsuario("Fer", "ardilla");
-        usuarios.addUsuario("Lau", "ballenita");
         */
+        usuarios.addUsuario("Lau", "ballenita");
+
         //Actualizar sesion
         sesion = usuarios.findUsuarioSeleccionado();
 
         //Poner los usuarios en la lista
+        adapter.clear();
         adapter.addAll(usuarios.getUsuariosRegistradosSimple());
         usuariosAElegir.setAdapter(adapter);
 
@@ -56,11 +65,18 @@ public class MainActivity extends AppCompatActivity {
         sesionImg.setImageResource(imageResource);
     }
 
-    public void openMenuPrincipal(View v) {
+    public void openMenuPrincipal() {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);
     }
 
-
-
+    public void crear(View v) {
+        try {
+            Intent intent = new Intent(this, SignIn.class);
+            startActivity(intent);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
 }
