@@ -35,7 +35,7 @@ public class RodearNumero_NextLevel extends AppCompatActivity {
     /*Se declara la funcion nextLevel se encarga de cambiar la pantalla actual por la pantalla
     * de la clase RodearNumero_Nivel2 o RodearNumero_Nivel3, dependiendo cual sea el valor de la
     * variable actNivel*/
-    public void nextLevel(View v) {
+   public void nextLevel(View v) {
         if(actNivel == 1) {
             Intent intent = new Intent(this, RodearNumero_Nivel2.class);
             startActivity(intent);
