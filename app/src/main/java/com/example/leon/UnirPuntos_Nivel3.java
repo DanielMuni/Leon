@@ -13,14 +13,15 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class UnirPuntos_Nivel3 extends AppCompatActivity {
+    //Se declaran las variables
     ImageButton btn1;
     ImageButton btn2;
     ImageButton btn3;
     ImageButton btn4;
     ImageButton btn5;
 
-    private static UnirPuntos_Nivel3 instance;
-    UnirPuntosJuego game;
+    private static UnirPuntos_Nivel3 instance; //Se declara la instancia de la clase
+    UnirPuntosJuego game; //Variable con la que se va a llamar a la clase UnirPuntosJuego
     ImageButton actBtn;
     boolean stateLine1;
     boolean stateLine2 = true;
@@ -31,8 +32,9 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unir_puntos_nivel3);
 
-        game = new UnirPuntosJuego();
+        game = new UnirPuntosJuego(); //Variable con la que se va a llamar a la clase UnirPuntosJuego
 
+        //Se le asignan los nombres de las variables a los botones correspondientes
         btn1 = findViewById(R.id.upNivel3_btn);
         btn2 = findViewById(R.id.upNivel3_btn2);
         btn3 = findViewById(R.id.upNivel3_btn3);
@@ -40,11 +42,14 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         btn5 = findViewById(R.id.upNivel3_btn5);
     }
 
+    /*Se declara la funcion openMenuPrincipal que cambia la pantalla actual por la pantalla que de la clase
+     * MenuPrincipall*/
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);
     }
 
+    //Se declaran las funciones UnirPuntos_Nivel3 y getInstance para llamar a la clase en otros archivos
     public UnirPuntos_Nivel3() {
         instance = this;
     }
@@ -53,6 +58,9 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         return instance;
     }
 
+    /*Se declara la funcion flashAndPlay un entero y dos ImageButton. Se encarga de hacer la animacion
+     * de cambiar de color, a color de actBtn, y lo regresa a su color original cuando el boton
+     * btn es presionado.*/
     private void flashAndPlay(int delay, ImageButton actBtn,ImageButton btn) {
         ObjectAnimator animator;
         animator = ObjectAnimator.ofObject(btn,
@@ -68,6 +76,10 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         animator.start();
     }
 
+    /*Se declara la funcion onTapLine1 que, si ningun boton de la linea 1 esta presionado, se encarga
+     * de asignar que la variable actBtn es el boton presionado y cambiar los botones a un color en
+     * especifico segun el boton que sea presionado. Marca la variable stateLine1 como true y la
+     * variable stateLine2 como false.*/
     public void onTapLine1(View v) {
 
         if (!stateLine1) {
@@ -88,6 +100,11 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         }
     }
 
+    /*Se declara la funcion onTapLine2 que, si ningun boton de la linea 2 esta presionado, manda a
+     * llamar a la funcion correctPair de la clase UnirPuntosJuego, si es verdadero le cambia el color
+     * al boton presionado por el color actual de actBtn y se manda a llamar a la funcion allPairs
+     * de la clase UnirPuntosJuego, si es falso manda a llamar a la funcion flashAndPlay y vuelve a
+     * actBtn transparente. Marca la variable stateLine2 como true y la variable stateLine1 como false.*/
     public void onTapLine2(View v) {
         ImageButton tapped = (ImageButton)v;
 
@@ -105,19 +122,26 @@ public class UnirPuntos_Nivel3 extends AppCompatActivity {
         }
     }
 
+    /*Se declara la funcion next que cambia la pantalla actual por la pantalla que de la clase
+     * UnirPuntos_NextLevel*/
     public void next () {
         Intent intent = new Intent(this, UnirPuntos_NextLevel.class);
         startActivity(intent);
     }
 
+    /*Se declara la funcion setState, recibe una variable de tipo booleano. Se le asigna el valor de
+     * la variable recibida a la variable actState.*/
     public void setState(boolean state) {
         actState = state;
     }
 
+    /*Se declara la funcion getState, la cual regresa el valor de la variable actState*/
     public boolean getState() {
         return actState;
     }
 
+    /*Se declara la funcion showScore, regresa el valor obtenido por la funcion getScore, de la clase
+     * UnirPuntosJuego, como string*/
     public String showScore() {
         return(Integer.toString(game.getScore()));
     }
