@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         //Actualizar sesion
         sesion = usuarios.findUsuarioSeleccionado();
 
