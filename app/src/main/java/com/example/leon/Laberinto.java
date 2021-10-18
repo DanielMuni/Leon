@@ -22,6 +22,9 @@ public class Laberinto extends AppCompatActivity {
     TextView felicitaciones;
     boolean [] controles;  //0 = arriba, 1 = derecha, 2 = abajo, 3 = izquierda
 
+    DataBase usuarios = MainActivity.usuarios;
+    Usuario  usuarioActual;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,7 @@ public class Laberinto extends AppCompatActivity {
 
         laberintoDisplay = (TableLayout) findViewById(R.id.laberintoDisplay);
         felicitaciones = (TextView) findViewById(R.id.felicitaciones);
+        usuarioActual = usuarios.findUsuarioSeleccionado();
     }
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
@@ -100,6 +104,11 @@ public class Laberinto extends AppCompatActivity {
 
             felicitaciones.setText("FELICIDADES!!!");
             felicitaciones.setTypeface(Typeface.MONOSPACE);
+
+            usuarioActual.aumentarPuntacion(100);
+            //Guardar la puntuacion del usuario en la base de datos
+            usuarios.actualizarPuntos(usuarioActual);
+
             Intent intent = new Intent(this, MenuPrincipal.class);
             startActivity(intent);
             finish();

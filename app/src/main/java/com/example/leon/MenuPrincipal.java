@@ -68,7 +68,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 break;
         }
 
-        String datos = usuarioActual.getNombre();
+        String datos = usuarioActual.getNombre() + "\t\t" +usuarioActual.getPuntuacion();
         nombreYPuntos.setText(datos);
     }
 
