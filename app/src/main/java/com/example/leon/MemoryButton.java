@@ -23,6 +23,8 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
     protected Drawable front;
     protected Drawable back;
 
+    /* Se crean los distintos "botones" dentro del layout, se define tamaño, posicion y parte trasera y frontal de las cartas del memorama */
+
     @SuppressLint("RestrictedApi")
     public MemoryButton(Context context, int r, int c, int frontImageDrawableId){
         super(context);
@@ -46,6 +48,8 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
         setLayoutParams(tempParams);
 
     }
+
+    /* Funciones que marcan cuando una carta fue seleccionada/volteada */
 
     public boolean isMatched() {
         return isMatched;

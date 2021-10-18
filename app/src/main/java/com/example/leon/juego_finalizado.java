@@ -15,7 +15,7 @@ public class juego_finalizado extends AppCompatActivity {
         setContentView(R.layout.activity_juego_finalizado);
     }
 
-	// Funcion Silueta Correcta
+    /* Funcion que permite al boton regresar al menu principal*/
 	public void MenuPrincipal(View view){
 		Intent siguienteNivel = new Intent(this, MenuPrincipal.class);
 		startActivity(siguienteNivel);

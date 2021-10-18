@@ -11,6 +11,8 @@ public class SimonSayModel {
     private boolean userTurn = false; //model?
     private int moves = 0; //model?
 
+    /* Funcion que inicializa el marcador del juego */
+
     public void inicializar(TextView marcador){
         moves = 0;
         count = 0;

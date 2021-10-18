@@ -22,6 +22,7 @@ public class primer_nivel extends AppCompatActivity {
         startActivity(nivelDos);
     }
 
+    /* Funcion que permite al boton regresar al menu principal*/
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);

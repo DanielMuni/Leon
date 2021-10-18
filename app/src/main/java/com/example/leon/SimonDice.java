@@ -31,6 +31,8 @@ public class SimonDice extends AppCompatActivity {
 
     SimonSayModel model = new SimonSayModel();
 
+    /* Crea la instancia de los botones del juego, asi como asignarles un sonido a cada uno */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,11 +52,13 @@ public class SimonDice extends AppCompatActivity {
         playerGreen = MediaPlayer.create(this, R.raw.green);
     }
 
+    /* Funcion que permite al boton regresar al menu principal*/
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);
     }
 
+    /* Funcion que detiene y destruye los sonidos despues de que estos se reproducen */
     @Override
     public void onDestroy(){
         super.onDestroy();
@@ -63,6 +67,8 @@ public class SimonDice extends AppCompatActivity {
         playerYellow.release();
         playerGreen.release();
     }
+
+    /* Funcion que comienza el juego */
 
     public SimonDice(){
         instance = this;
@@ -77,6 +83,7 @@ public class SimonDice extends AppCompatActivity {
         model.getNext();
     }
 
+    /* Funcion que recibe los botones que ingresa el jugador*/
 
     public void handleTap(View v){
         if(model.turnoDelJugador()){
@@ -97,7 +104,9 @@ public class SimonDice extends AppCompatActivity {
         }
     }
 
-    public void flashAndPlaySound(int delay, int number){ //controlador
+    /* Controlador del juego */
+
+    public void flashAndPlaySound(int delay, int number){
         ObjectAnimator animator;
         final MediaPlayer player;
         Button botonTap;

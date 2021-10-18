@@ -10,7 +10,7 @@ import android.widget.Button;
 public class Memorama extends AppCompatActivity {
 
     private Button button4x4;
-
+    /* Funcion que permite al boton comenzar el juego*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class Memorama extends AppCompatActivity {
         });
     }
 
+    /* Funcion que permite al boton regresar al menu principal*/
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);

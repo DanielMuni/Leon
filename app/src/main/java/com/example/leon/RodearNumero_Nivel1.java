@@ -14,8 +14,10 @@ import android.widget.Button;
 
 public class RodearNumero_Nivel1 extends AppCompatActivity {
 
-    private static RodearNumero_Nivel1 instance;
-    RodearNumeroJuego game;
+    private static RodearNumero_Nivel1 instance; //Se declara la instancia de la clase
+    
+    //Se declaran las variables
+    RodearNumeroJuego game; //Variable con la que se va a llamar a la clase RodearNumeroJuego
     boolean actState = false;
 
     @Override
@@ -23,14 +25,17 @@ public class RodearNumero_Nivel1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rodear_numero_nivel1);
 
-        game = new RodearNumeroJuego();
+        game = new RodearNumeroJuego(); //Variable con la que se va a llamar a la clase RodearNumeroJuego
     }
 
+    /*Se declara la funcion openMenuPrincipal, la cual se encarga de cambiar la pantalla actual por la
+    * pantalla de la clase MenuPrincipal*/
     public void openMenuPrincipal(View v) {
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);
     }
 
+    //Se declaran las funciones RodeaNumero_Nivel1 y getInstance para llamar a la clase en otros archivos
     public RodearNumero_Nivel1() {
         instance = this;
     }
@@ -39,6 +44,8 @@ public class RodearNumero_Nivel1 extends AppCompatActivity {
         return instance;
     }
 
+    /*Se declara la funcion flashAndPlay, la cual recibe un entero y un boton y se encarga de hacer
+     * la animacion de cambiar y regresar el color a un boton cuando es presionado */
     private void flashAndPlay(int delay, Button btn) {
         ObjectAnimator animator;
         animator = ObjectAnimator.ofObject(btn,
@@ -54,6 +61,10 @@ public class RodearNumero_Nivel1 extends AppCompatActivity {
         animator.start();
     }
 
+    /*Se declara la funcion onTap, con ayuda de la funcion correctButton, de la clase RodearNumeroJuego,
+     * manda a llamar a la funcion flashAndPlay si el boton es incorrecto y si es correcto lo
+     * cambia de color, le cambia el contenido de la descripcion para ya no poder elegirlo de nuevo
+     * y manda a llamar a la funcion allNumbers de la clase RodearNumeroJuego.*/
     public void onTap(View v) {
         Button tapped = (Button)v;
 
@@ -71,19 +82,26 @@ public class RodearNumero_Nivel1 extends AppCompatActivity {
 
     }
 
+    /*Se declara la funcion nextLevel, la cual se encarga de cambiar la pantalla actual por la
+    * pantalla de la clase RodearNumero_NextLevel*/
     public void nextLevel() {
         Intent intent = new Intent(this, RodearNumero_NextLevel.class);
         startActivity(intent);
     }
 
+    /*Se declara la funcion setState, recibe una variable de tipo booleano. Se le asigna el valor de
+    * la variable recibida a la variable actState.*/
     public void setState(boolean state) {
         actState = state;
     }
 
+    /*Se declara la funcion getState, la cual regresa el valor de la variable actState*/
     public boolean getState() {
         return actState;
     }
 
+    /*Se declara la funcion showScore, regresa el valor obtenido por la funcion getScore, de la clase
+    * RodearNumeroJuego, como string*/
     public String showScore() {
         return(Integer.toString(game.getScore()));
     }
