@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityManager;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -45,8 +47,27 @@ public class MenuPrincipal extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         usuarioActual = usuarios.findUsuarioSeleccionado();
-        int imageResource = getApplicationContext().getResources().getIdentifier("drawable/" + usuarioActual.getImagenSrc(), null, getApplicationContext().getPackageName());
-        perfil.setImageResource(imageResource);
+        String imagenDePerfil = usuarioActual.getImagenSrc();
+        System.out.println(imagenDePerfil);
+
+        switch (imagenDePerfil){
+            case "perfil_1":
+                perfil.setImageResource(R.drawable.perfil_1);
+                break;
+            case "perfil_2":
+                perfil.setImageResource(R.drawable.perfil_2);
+                break;
+            case "perfil_3":
+                perfil.setImageResource(R.drawable.perfil_3);
+                break;
+            case "perfil_4":
+                perfil.setImageResource(R.drawable.perfil_4);
+                break;
+            default:
+                perfil.setImageResource(R.drawable.perfil_0);
+                break;
+        }
+
         String datos = usuarioActual.getNombre();
         nombreYPuntos.setText(datos);
     }

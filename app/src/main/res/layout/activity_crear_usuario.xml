@@ -30,7 +30,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil1"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/perfil_1" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
@@ -39,7 +39,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil2"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/perfil_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +61,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil3"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/perfil_3" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
@@ -70,7 +70,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:onClick="perfil4"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/perfil_4" />
         </LinearLayout>
     </LinearLayout>
 

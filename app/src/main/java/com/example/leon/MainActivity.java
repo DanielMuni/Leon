@@ -46,11 +46,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        /*
         usuarios.limpiar();
-        usuarios.addUsuario("Fer", "ardilla");
-        */
-        usuarios.addUsuario("Lau", "ballenita");
+        //usuarios.addUsuario("Fer", "perfil_1");
+        //usuarios.addUsuario("Lau", "perfil_2");
 
         //Actualizar sesion
         sesion = usuarios.findUsuarioSeleccionado();
@@ -60,10 +58,16 @@ public class MainActivity extends AppCompatActivity {
         adapter.addAll(usuarios.getUsuariosRegistradosSimple());
         usuariosAElegir.setAdapter(adapter);
 
+
         //Poner la imagen de perfil de usuario activo
-        int imageResource = getApplicationContext().getResources().getIdentifier("drawable/" + sesion.getImagenSrc(), null, getApplicationContext().getPackageName());
-        sesionImg.setImageResource(imageResource);
+        if (sesion != null) {
+            int imageResource = getApplicationContext().getResources().getIdentifier("drawable/" + sesion.getImagenSrc(), null, getApplicationContext().getPackageName());
+            sesionImg.setImageResource(imageResource);
+        }
+        else
+            sesionImg.setImageResource(R.drawable.perfil_0);
     }
+
 
     public void openMenuPrincipal() {
         Intent intent = new Intent(this, MenuPrincipal.class);

@@ -15,7 +15,7 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_usuario);
-        //nombre = findViewById(R.id.nombreDeUsuario);
+        nombre = findViewById(R.id.nombreDeUsuario);
         imageSrc = "perfil_0";
     }
 
