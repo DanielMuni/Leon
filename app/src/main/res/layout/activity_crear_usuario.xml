@@ -24,20 +24,20 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:id="@+id/perfil1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:onClick="perfil1"
                 android:src="@drawable/perfil_1" />
 
 
             <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:id="@+id/perfil2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:onClick="perfil2"
                 android:src="@drawable/perfil_2" />
@@ -47,7 +47,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imagenSelecionada"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,19 +63,19 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:id="@+id/perfil3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:onClick="perfil3"
                 android:src="@drawable/perfil_3" />
 
             <ImageButton
-                android:id="@+id/imageButton10"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:id="@+id/perfil4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:onClick="perfil4"
                 android:src="@drawable/perfil_4" />

@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_crear.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_crear_usuario.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_crear_usuario.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_laberinto.xml" value="0.12182971014492754" />
         <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
