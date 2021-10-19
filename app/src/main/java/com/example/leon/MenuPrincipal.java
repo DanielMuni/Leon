@@ -119,9 +119,4 @@ public class MenuPrincipal extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void cambiarPerfil(View v){
-        Intent intent = new Intent(this, CambiarPerfil.class);
-        startActivity(intent);
-    }
-
 }

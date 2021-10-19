@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public static DataBase usuarios;
@@ -20,14 +21,17 @@ public class MainActivity extends AppCompatActivity {
 
     Usuario sesion;
     ImageView sesionImg;
-
+    TextView sesionNombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         usuariosAElegir = findViewById(R.id.usuariosRegistrados);
         sesionImg = findViewById(R.id.imgUsuarioSelecionado);
+        sesionNombre = findViewById(R.id.nombreUsuarioSelecionado);
+
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         usuarios = new DataBase(this, null, null, 1);
 
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         if (sesion != null) {
             int imageResource = getApplicationContext().getResources().getIdentifier("drawable/" + sesion.getImagenSrc(), null, getApplicationContext().getPackageName());
             sesionImg.setImageResource(imageResource);
+            sesionNombre.setText(sesion.getNombre());
         }
         else
             sesionImg.setImageResource(R.drawable.perfil_0);
@@ -65,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openMenuPrincipal() {
         Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
+    }
+
+    public void cambiarPerfil(View v){
+        Intent intent = new Intent(this, CambiarPerfil.class);
         startActivity(intent);
     }
 
