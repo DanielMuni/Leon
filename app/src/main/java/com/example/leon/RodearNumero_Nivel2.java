@@ -75,7 +75,7 @@ public class RodearNumero_Nivel2 extends AppCompatActivity {
                 tapped.setTextColor(Color.argb(100, 187, 134, 252));
                 tapped.setContentDescription("F");
 
-                game.allNumbers(3, 1);
+                game.allNumbers(3, 2);
              } else {
                 flashAndPlay(0, tapped);
              }
