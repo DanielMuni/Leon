@@ -68,7 +68,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 break;
         }
 
-        String datos = usuarioActual.getNombre();
+        String datos = usuarioActual.getNombre() + "\t\t" +usuarioActual.getPuntuacion();
         nombreYPuntos.setText(datos);
     }
 
@@ -116,6 +116,11 @@ public class MenuPrincipal extends AppCompatActivity {
 
     public void openEncontrarSilueta(View v) {
         Intent intent = new Intent(this, primer_nivel.class);
+        startActivity(intent);
+    }
+
+    public void cambiarPerfil(View v){
+        Intent intent = new Intent(this, CambiarPerfil.class);
         startActivity(intent);
     }
 

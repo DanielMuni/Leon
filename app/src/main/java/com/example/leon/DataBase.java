@@ -123,6 +123,15 @@ public class DataBase extends SQLiteOpenHelper {
         db.update(TABLE, query, COLUMN_ID + " = " + usuario.getId(), null);
         db.close();
     }
+
+    public void actualizarImgSrc(Usuario usuario){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues query = new ContentValues();
+        query.put(COLUMN_IMAGEN, usuario.getImagenSrc());
+        db.update(TABLE, query, COLUMN_ID + " = " + usuario.getId(), null);
+        db.close();
+    }
+
     public void limpiar(){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE;
