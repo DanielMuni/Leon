@@ -19,7 +19,6 @@ public class Laberinto extends AppCompatActivity {
     LaberintoModel laberinto = new LaberintoModel();
     String laberintoASCII;
     TableLayout laberintoDisplay;
-    TextView felicitaciones;
     boolean [] controles;  //0 = arriba, 1 = derecha, 2 = abajo, 3 = izquierda
 
     DataBase usuarios = MainActivity.usuarios;
@@ -31,7 +30,6 @@ public class Laberinto extends AppCompatActivity {
         setContentView(R.layout.activity_laberinto);
 
         laberintoDisplay = (TableLayout) findViewById(R.id.laberintoDisplay);
-        felicitaciones = (TextView) findViewById(R.id.felicitaciones);
         usuarioActual = usuarios.findUsuarioSeleccionado();
     }
     public void openMenuPrincipal(View v) {
@@ -102,13 +100,13 @@ public class Laberinto extends AppCompatActivity {
             for (int i = 0; i < 4; i++)
                 controles[i] = false;
 
-            felicitaciones.setText("FELICIDADES!!!");
-            felicitaciones.setTypeface(Typeface.MONOSPACE);
-
             usuarioActual.aumentarPuntacion(100);
             //Guardar la puntuacion del usuario en la base de datos
             usuarios.actualizarPuntos(usuarioActual);
 
+            //Mostrar felicitaciones
+            Intent felicitaciones = new Intent(this, Laberinto_Win.class);
+            startActivity(felicitaciones);
             finish();
         }
     }

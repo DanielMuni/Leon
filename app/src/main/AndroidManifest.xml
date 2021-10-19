@@ -42,6 +42,9 @@
             android:name=".Laberinto"
             android:exported="true" />
         <activity
+            android:name=".Laberinto_Win"
+            android:exported="true" />
+        <activity
             android:name=".SimonDice"
             android:exported="true" />
         <activity
