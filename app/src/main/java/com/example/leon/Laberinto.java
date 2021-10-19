@@ -109,8 +109,6 @@ public class Laberinto extends AppCompatActivity {
             //Guardar la puntuacion del usuario en la base de datos
             usuarios.actualizarPuntos(usuarioActual);
 
-            Intent intent = new Intent(this, MenuPrincipal.class);
-            startActivity(intent);
             finish();
         }
     }

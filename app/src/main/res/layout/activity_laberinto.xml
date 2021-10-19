@@ -19,25 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageButton
-            android:id="@+id/returnButton"
-            android:layout_width="44dp"
-            android:layout_height="42dp"
-            android:background="#00FFFFFF"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:onClick="openMenuPrincipal"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.042"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.007"
-            app:srcCompat="?attr/homeAsUpIndicator"
-            app:tint="#FFFFFF"
-            tools:ignore="SpeakableTextPresentCheck" />
-
         <TextView
             android:id="@+id/toolbar_title"
             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
